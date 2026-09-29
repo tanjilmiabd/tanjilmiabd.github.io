@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Tanjil Mia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0b1f2a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand-mark">TM</span> Tanjil Mia</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<section class="admin-shell" style="border-top:none;">
+  <div class="wrap" style="max-width:720px;">
+    <div class="eyebrow">Owner only</div>
+    <h1>Publish a post</h1>
+    <p class="lede">This form writes directly to the <code>posts/</code> folder of your GitHub repo using the GitHub API. GitHub Pages rebuilds automatically — the new post is usually live within a minute.</p>
+
+    <div class="notice warn">
+      Your GitHub token is stored only in this browser's local storage and sent only to <code>api.github.com</code>. Don't use this page on a shared or public computer, and use a <strong>fine-grained token</strong> scoped to just this repository's Contents (read &amp; write) permission — never a token with full account access.
+    </div>
+
+    <h2 style="margin-top:36px;">Repository settings</h2>
+    <div class="admin-grid">
+      <div class="field">
+        <label for="cfg-owner">GitHub username</label>
+        <input id="cfg-owner" placeholder="tanjilmiabd">
+      </div>
+      <div class="field">
+        <label for="cfg-repo">Repository name</label>
+        <input id="cfg-repo" placeholder="tanjilmiabd.github.io">
+      </div>
+      <div class="field">
+        <label for="cfg-branch">Branch</label>
+        <input id="cfg-branch" placeholder="main">
+      </div>
+      <div class="field">
+        <label for="cfg-token">Personal Access Token</label>
+        <input id="cfg-token" type="password" placeholder="github_pat_…">
+      </div>
+    </div>
+    <div class="cta-row" style="margin-top:4px;">
+      <button class="btn btn-ghost" id="save-settings">Save settings to this browser</button>
+      <button class="btn btn-ghost" id="clear-settings">Clear saved token</button>
+    </div>
+    <div id="settings-notice"></div>
+
+    <h2 style="margin-top:48px;">New / update post</h2>
+    <div class="field">
+      <label for="p-title">Title</label>
+      <input id="p-title" placeholder="Why NAP consistency still matters in 2026">
+    </div>
+    <div class="admin-grid">
+      <div class="field">
+        <label for="p-slug">Slug (used in the URL — auto-filled, editable)</label>
+        <input id="p-slug" placeholder="nap-consistency-2026">
+      </div>
+      <div class="field">
+        <label for="p-date">Date</label>
+        <input id="p-date" type="date">
+      </div>
+    </div>
+    <div class="field">
+      <label for="p-tags">Tags (comma separated)</label>
+      <input id="p-tags" placeholder="SEO, Local SEO">
+    </div>
+    <div class="field">
+      <label for="p-excerpt">Excerpt (shown on the blog list page)</label>
+      <input id="p-excerpt" placeholder="One or two sentences summarizing the post.">
+    </div>
+    <div class="field">
+      <label for="p-content">Content</label>
+      <textarea id="p-content" placeholder="Write in plain text or light markdown: # Heading, ## Subheading, **bold**, *italic*, [link text](https://example.com)"></textarea>
+      <small>Leave a blank line between paragraphs.</small>
+    </div>
+
+    <div class="cta-row">
+      <button class="btn btn-primary" id="publish-btn">Publish post</button>
+      <button class="btn btn-ghost" id="clear-form">Clear form</button>
+    </div>
+    <div id="publish-notice"></div>
+
+    <h2 style="margin-top:56px;">Existing posts</h2>
+    <div id="existing-posts"><p>Loading…</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>© <span id="year"></span> Tanjil Mia. Admin panel — not indexed.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

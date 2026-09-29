@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Tanjil Mia, ORM &amp; SEO Specialist</title>
+<meta name="description" content="Notes on ORM, SEO, and search visibility by Tanjil Mia.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Md. Tanjil Mia">
+<link rel="canonical" href="https://tanjilmiabd.github.io/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tanjil Mia">
+<meta property="og:title" content="Blog — Tanjil Mia">
+<meta property="og:description" content="Notes on ORM, SEO, and search visibility by Tanjil Mia.">
+<meta property="og:url" content="https://tanjilmiabd.github.io/blog.html">
+<meta property="og:image" content="https://tanjilmiabd.github.io/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://tanjilmiabd.github.io/assets/og-cover.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0b1f2a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://tanjilmiabd.github.io/blog.html",
+  "name": "Tanjil Mia — Blog",
+  "url": "https://tanjilmiabd.github.io/blog.html",
+  "author": { "@type": "Person", "name": "Md. Tanjil Mia" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><span class="brand-mark">TM</span> Tanjil Mia</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<header class="admin-shell" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="eyebrow">Writing</div>
+    <h1>Blog</h1>
+    <p class="lede">Short notes on reputation management, SEO, and search visibility.</p>
+  </div>
+</header>
+
+<section style="border-top:none;">
+  <div class="wrap">
+    <div id="post-list" class="post-grid">
+      <div class="empty-state">Loading posts…</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:10px;">
+    <span>© <span id="year"></span> Tanjil Mia. Dhaka, Bangladesh.</span>
+    <span><a href="mailto:tanjil.works@gmail.com">tanjil.works@gmail.com</a></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/blog.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

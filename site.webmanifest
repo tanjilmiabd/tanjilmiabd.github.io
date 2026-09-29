@@ -1,0 +1,12 @@
+{
+  "name": "Tanjil Mia — ORM & SEO Specialist",
+  "short_name": "Tanjil Mia",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0b1f2a",
+  "theme_color": "#0b1f2a",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

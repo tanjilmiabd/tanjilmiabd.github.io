@@ -14,7 +14,7 @@ fetch("posts/index.json?_=" + Date.now())
     }
     posts.sort((a, b) => (a.date < b.date ? 1 : -1));
     el.innerHTML = posts.map((p) => `
-      <article class="post-card">
+      <article class="post-card reveal tilt-card">
         <div class="pdate">${escapeHtml(p.date)}</div>
         <div>
           <h3><a href="post.html?slug=${encodeURIComponent(p.slug)}">${escapeHtml(p.title)}</a></h3>
@@ -22,6 +22,7 @@ fetch("posts/index.json?_=" + Date.now())
           ${p.tags && p.tags.length ? `<div class="tags">${p.tags.map((t) => `<span>${escapeHtml(t)}</span>`).join("")}</div>` : ""}
         </div>
       </article>`).join("");
+    if (window.initReveal) window.initReveal();
   })
   .catch(() => {
     document.getElementById("post-list").innerHTML =
